@@ -59,9 +59,8 @@ If you need the moment object by itself, moment is avaibale as a static API.
 
 ```js
 tokei.moment
-
-//usage
 tokei.moment.tz
+//...
 ```
 
 
