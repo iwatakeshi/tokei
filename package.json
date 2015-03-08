@@ -1,0 +1,26 @@
+{
+  "name": "tokei",
+  "version": "0.0.1",
+  "description": "A Date, Time, and Timezone library that combines Moment.js and Moment Timezone",
+  "main": "tokei.js",
+  "dependencies": {
+    "intl": "^0.1.4",
+    "moment": "^2.9.0",
+    "moment-timezone": "^0.3.0",
+    "uberproto": "^1.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iwatakeshi/tokei.git"
+  },
+  "author": "iwatakeshi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iwatakeshi/tokei/issues"
+  },
+  "homepage": "https://github.com/iwatakeshi/tokei"
+}
