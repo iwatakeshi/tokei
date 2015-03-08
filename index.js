@@ -56,7 +56,7 @@
         global.locale = locale;
     }
 
-    tokei.opt = function(opt) {
+    tokei.config = function(opt) {
         global.locale = opt;
     }
 

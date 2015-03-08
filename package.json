@@ -19,6 +19,18 @@
     },
     "author": "iwatakeshi",
     "license": "MIT",
+    "keywords": [
+        "time",
+        "date",
+        "localization",
+        "locale",
+        "i18n",
+        "l10n",
+        "moment",
+        "moment.js",
+        "timezone",
+        "format"
+    ],
     "bugs": {
         "url": "https://github.com/iwatakeshi/tokei/issues"
     },

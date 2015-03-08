@@ -18,9 +18,11 @@ var tokei = require('tokei');
 tokei(locale, opt);
 ```
 
-##Intl.DateTimeFormat
+##API
 
-tokei wraps the format `Intl` function and offers a convenience `now` method:
+###Intl.DateTimeFormat
+
+tokei wraps the format `Intl.DateTimeFormat` function and offers a convenience `now` method:
 
 ```js
 //return the current date (use options to specify date or time)
@@ -31,7 +33,7 @@ tokei(locale, opt).format(date);
 ```
 
 
-##Moment.js and Moment.js Timezone
+###Moment.js and Moment.js Timezone
 
 tokei also allows you to use moment the way you would expect it.
 The only difference between using moment and tokei is that the 
@@ -55,7 +57,7 @@ As expected, moment timezone also works
 
 ###Moment.js
 
-If you need the moment object by itself, moment is avaibale as a static API.
+If you need the moment object by itself, moment is available as a static API.
 
 ```js
 tokei.moment
@@ -64,23 +66,23 @@ tokei.moment.tz
 ```
 
 
-###Global locale
+###Locale
 
-Also, if you would like the global locale to be different from the default `en-US`, the you can change it with:
+Also, if you would like the global locale to be different from the default `en-US`, then you can change it with:
 
 ```js
 tokei.locale();
 ```
 
-###Global opt
+###Config
 
-You can change the default options for `Intl.DateTimeFormat` by using:
+You can change the default option for `Intl.DateTimeFormat` by using:
 
 ```js
-tokei.opt();
+tokei.config(opt);
 ```
 
-The default opt is:
+The default option is:
 
 ```js
 {
