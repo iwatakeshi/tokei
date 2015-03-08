@@ -1,7 +1,7 @@
 {
     "name": "tokei",
     "version": "0.0.1",
-    "description": "A Date, Time, and Timezone library that combines Moment.js and Moment Timezone",
+    "description": "Time localization for Node.js",
     "main": "index.js",
     "dependencies": {
         "intl": "^0.1.4",
