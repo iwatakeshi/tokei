@@ -11,7 +11,13 @@
 
     var tokei,
         global = {
-            locale: 'en-US'
+            locale: 'en-US',
+            opt: {
+                weekday: 'short',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            }
         },
         Proto = require('uberproto'),
         moment = require('moment-timezone'),
@@ -23,12 +29,7 @@
             this._intl = intl.DateTimeFormat;
             this._date = moment();
             this._locale = locale || global.locale;
-            this._opt = opt || {
-                weekday: 'short',
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric'
-            };
+            this._opt = opt || global.opt;
             //set moment
             this._moment = moment;
             //set moment to global locale
@@ -53,6 +54,10 @@
 
     tokei.locale = function(locale) {
         global.locale = locale;
+    }
+
+    tokei.opt = function(opt) {
+        global.locale = opt;
     }
 
     tokei.moment = moment;

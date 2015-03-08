@@ -72,3 +72,22 @@ Also, if you would like the global locale to be different from the default `en-U
 ```js
 tokei.locale();
 ```
+
+###Global opt
+
+You can change the default options for `Intl.DateTimeFormat` by using:
+
+```js
+tokei.opt();
+```
+
+The default opt is:
+
+```js
+{
+    weekday: 'short',
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+}
+```
