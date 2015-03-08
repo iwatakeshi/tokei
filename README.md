@@ -1,5 +1,10 @@
 # tokei
+
 Time localization for node.js
+
+[![Dependency Status](https://david-dm.org/iwatakeshi/tokei.png)](https://github.com/iwatakeshi/tokei/blob/master/package.json) [![License Status](http://img.shields.io/npm/l/tokei.svg)](https://github.com/iwatakeshi/tokei/blob/master/LICENSE) [![Downloads](http://img.shields.io/npm/dm/tokei.svg)]() [![Version](http://img.shields.io/npm/v/tokei.svg)]()
+
+[![NPM](https://nodei.co/npm/tokei.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/tokei/)
 
 Tokei is a date/time localization library that combines and wraps **Intl.DateTimeFormat** and **Moment.js** (including **Moment.js Timezone**). The API is very simple.
 
@@ -9,7 +14,7 @@ Tokei is a date/time localization library that combines and wraps **Intl.DateTim
 npm install --save tokei
 ```
 
-tokei can take two objects:
+tokei can take two objects where locale is `String` and opt is a plain `Object`:
 
 ```js
 var tokei = require('tokei');
@@ -17,6 +22,8 @@ var tokei = require('tokei');
 //this will return 'this' (itself)
 tokei(locale, opt);
 ```
+
+See [Mozilla's documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat#Example:_Using_options) for examples on options.
 
 ##API
 
@@ -30,6 +37,12 @@ tokei().now();
 
 //return the formatted date
 tokei(locale, opt).format(date);
+
+//example:
+tokei('ja').format(new Date());
+//output: '2015年3月月8日(日曜日'
+//note the above is caused by a known bug for Intl
+//see https://github.com/andyearnshaw/Intl.js/pull/76
 ```
 
 
