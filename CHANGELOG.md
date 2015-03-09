@@ -5,6 +5,7 @@ Changelog
 
 * Initial commit
 
-**0.0.2**
+**0.1.0**
 
 * Updated readme
+* Added two functions for date and time

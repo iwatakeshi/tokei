@@ -13,10 +13,17 @@
         global = {
             locale: 'en-US',
             opt: {
-                weekday: 'short',
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric'
+                date: {
+                    weekday: 'short',
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                },
+                time: {
+                    hour: 'numeric',
+                    minute: 'numeric',
+                    second: 'numeric'
+                }
             }
         },
         Proto = require('uberproto'),
@@ -29,7 +36,6 @@
             this._intl = intl.DateTimeFormat;
             this._date = moment();
             this._locale = locale || global.locale;
-            this._opt = opt || global.opt;
             //set moment
             this._moment = moment;
             //set moment to global locale
@@ -38,6 +44,14 @@
         },
         now: function() {
             return new this._intl(this._locale, this._opt).format(moment());
+        },
+        date: function(opt) {
+            this._opt = opt || global.opt.date;
+            return this;
+        },
+        time: function(opt) {
+            this._opt = opt || global.opt.time;
+            return this;
         },
         format: function(date) {
             return new this._intl(this._locale, this._opt).format(date || this._date);
