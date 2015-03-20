@@ -55,7 +55,7 @@
          * @return {String} The current date or time.
          */
         now: function() {
-            return new this._intl.date(this._locale, this._opt).format(moment());
+            return new this._intl.date(this._locale, this._options).format(moment());
         },
         /**
          * @method date
@@ -80,7 +80,7 @@
         },
         /**
          * @method time
-         * @description Formats the time. See {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/format | DateTimeFormat}
+         * @description Formats the time. See {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/format | DateTimeFormat}.
          * @param {Object} options The options for time formatting.
          * 
          * @example <caption>Get the formatted time</caption>
@@ -96,12 +96,12 @@
          * @return {String} The formatted time.
          */
         time: function(options) {
-            this._options = opt || global.options.time;
+            this._options = options || global.options.time;
             return this;
         },
         /**
          * @method number
-         * @description Formats the number. See {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat | NumberFormat}
+         * @description Formats the number. See {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat | NumberFormat}.
          * @param {Object} options The options for number formatting.
          * 
          * @example <caption>Get the formatted number</caption>
@@ -125,7 +125,7 @@
          * @method format
          * @description Formats the object. 
          * See {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/format | Intl.DateTimeFormat.prototype.format} or 
-         * for Date format and {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/format | Intl.NumberFormat.prototype.format}
+         * for Date format and {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/format | Intl.NumberFormat.prototype.format}.
          * for Number format.
          * @param  {(Date | Number)} obj The object to format.
          *
@@ -149,7 +149,7 @@
         },
         /**
          * @method moment
-         * @description The local moment. See {@link http://momentjs.com/| Moment.js}
+         * @description The local moment. See {@link http://momentjs.com/| Moment.js}.
          *
          * @example <caption>Using moment with Tokei</caption>
          *
@@ -158,7 +158,7 @@
          * //you can even set a locale
          * tokei('ja').moment();
          * 
-         * @return {Moment} See {@link http://momentjs.com/| Moment.js}
+         * @return {Moment} See {@link http://momentjs.com/| Moment.js}.
          */
         moment: function() {
             return this._moment.apply(this, arguments);
@@ -206,17 +206,17 @@
      * @method  config
      * @static
      * @description Sets the global options for Tokei.
-     * @param  {Object} opt The global options.
+     * @param  {Object} options The global options.
      * @return {Object}     The global options.
      * @public
      */
-    tokei.config = function(opt) {
-        global.options = opt || global.options;
+    tokei.config = function(options) {
+        global.options = options || global.options;
         return global.options;
     }
 
     /**
-     * @description The global moment. See {@link http://momentjs.com/| Moment.js}
+     * @description The global moment. See {@link http://momentjs.com/| Moment.js}.
      * @type {Moment}
      * @public
      */
