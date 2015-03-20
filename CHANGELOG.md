@@ -20,3 +20,7 @@ Changelog
 * Added method `number`
 * Fixed bugs and inconsistencies
 * Updated package
+
+**0.2.1**
+
+* Fixed readme

@@ -29,7 +29,7 @@ The beautifully generated and **nerd** approved docs can be found at [GitHub](ht
 
 ##Contribution
 
-I would gladly any contribution! The source is well commented and short (~70 without commments). Just fork and pull!
+I would gladly accept any contribution! The source is well commented and short (~70 without commments). Just fork and pull!
 
 ##Known Issues
 
