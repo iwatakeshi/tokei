@@ -1,6 +1,6 @@
 # tokei
 
-Time localization for node.js
+Date, time, and number localization for node.js
 
 [![Dependency Status](https://david-dm.org/iwatakeshi/tokei.png)](https://github.com/iwatakeshi/tokei/blob/master/package.json) [![License Status](http://img.shields.io/npm/l/tokei.svg)](https://github.com/iwatakeshi/tokei/blob/master/LICENSE) [![Downloads](http://img.shields.io/npm/dm/tokei.svg)]() [![Version](http://img.shields.io/npm/v/tokei.svg)]()
 ![](https://img.shields.io/badge/nerd-approved-brightgreen.svg)
