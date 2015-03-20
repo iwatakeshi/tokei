@@ -1,7 +1,7 @@
 {
     "name": "tokei",
-    "version": "0.1.0",
-    "description": "Time localization for Node.js",
+    "version": "0.2.0",
+    "description": "Date, time, and number, localization for Node.js",
     "main": "index.js",
     "dependencies": {
         "intl": "^0.1.4",
@@ -29,7 +29,8 @@
         "moment",
         "moment.js",
         "timezone",
-        "format"
+        "format",
+        "number"
     ],
     "bugs": {
         "url": "https://github.com/iwatakeshi/tokei/issues"
