@@ -5,13 +5,13 @@
   "main": "index.js",
   "dependencies": {
     "intl": "^0.1.4",
-    "moment": "^2.9.0",
+    "moment": "^2.10.2",
     "moment-timezone": "^0.3.1",
     "uberproto": "^1.1.2"
   },
   "devDependencies": {
-    "chai": "^2.1.2",
-    "mocha": "^2.2.1"
+    "chai": "^2.2.0",
+    "mocha": "^2.2.4"
   },
   "scripts": {
     "test": "mocha ./test"
