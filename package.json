@@ -1,16 +1,16 @@
 {
   "name": "tokei",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Date, time, and number, localization for Node.js",
   "main": "index.js",
   "dependencies": {
-    "intl": "^0.1.4",
+    "intl": "^1.0.0",
     "moment": "^2.10.2",
-    "moment-timezone": "^0.3.1",
+    "moment-timezone": "^0.4.0",
     "uberproto": "^1.1.2"
   },
   "devDependencies": {
-    "chai": "^2.2.0",
+    "chai": "^3.2.0",
     "mocha": "^2.2.4"
   },
   "scripts": {
