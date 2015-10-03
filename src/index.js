@@ -96,7 +96,7 @@ var Tokei = (function () {
 
     /**
      * Formats the date.
-     * See (DateTimeFormat)[https://goo.gl/19d1rX].
+     * See [DateTimeFormat](https://goo.gl/19d1rX).
      * @param {Object} options The options for date formatting.
      * @return {Tokei} this
      */
