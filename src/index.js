@@ -302,7 +302,7 @@ tokei.config = function (options) {
 };
 
 /**
- * The global moment. See {@link http://momentjs.com/| Moment.js}.
+ * The global moment. See [Moment.js](http://momentjs.com/).
  * @type {Moment}
  * @public
  */
