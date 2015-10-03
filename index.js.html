@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>tokei</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/cayman.css">
+    <link rel="stylesheet" href="css/prism.css">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">tokei</h1>
+      <h2 class="project-tagline">Date, time, and number, localization for Node.js</h2><a href="https://github.com/iwatakeshi/tokei" target="_blank" class="btn">View on GitHub</a><a href="https://npmjs.com/package/tokei" target="_blank" class="btn">View on npm</a>
+    </section>
+    <section data-spy="scroll" data-target=".scrollspy" class="main-content">
+      <div class="row">
+        <div class="col-md-3 col-xs-3 bs-docs-sidebar">
+          <ul id="sidebar" class="nav nav-stacked fixed">
+            <li><a href="index.html">Main</a></li>
+            <li class="active"><a href="index.js.html">index.js
+                <ul class="nav nav-stacked">
+                  <li><a href="#settings"><i class="alert alert-success"></i><span>settings</span></a>
+                  </li>
+                  <li><a href="#Intl"><i class="alert alert-success"></i><span>Intl</span></a>
+                  </li>
+                  <li><a href="#now"><i class="alert alert-info"></i><span>now</span></a>
+                  </li>
+                  <li><a href="#date"><i class="alert alert-info"></i><span>date</span></a>
+                  </li>
+                  <li><a href="#_options"><i class="alert alert-success"></i><span>_options</span></a>
+                  </li>
+                  <li><a href="#time"><i class="alert alert-info"></i><span>time</span></a>
+                  </li>
+                  <li><a href="#_options"><i class="alert alert-success"></i><span>_options</span></a>
+                  </li>
+                  <li><a href="#number"><i class="alert alert-info"></i><span>number</span></a>
+                  </li>
+                  <li><a href="#_options"><i class="alert alert-success"></i><span>_options</span></a>
+                  </li>
+                  <li><a href="#format"><i class="alert alert-info"></i><span>format</span></a>
+                  </li>
+                  <li><a href="#if"><i class="alert alert-info"></i><span>if</span></a>
+                  </li>
+                  <li><a href="#moment"><i class="alert alert-info"></i><span>moment</span></a>
+                  </li>
+                  <li><a href="#tokei"><i class="alert alert-info"></i><span>tokei</span></a>
+                  </li>
+                  <li><a href="#locale"><i class="alert alert-info"></i><span>locale</span></a>
+                  </li>
+                  <li><a href="#config"><i class="alert alert-info"></i><span>config</span></a>
+                  </li>
+                  <li><a href="#moment"><i class="alert alert-success"></i><span>moment</span></a>
+                  </li>
+                </ul></a></li>
+          </ul>
+        </div>
+        <div class="col-md-9">
+          <div class="description"><p>tokei<br />author : Takeshi Iwana<br /><a href="https://github.com/iwatakeshi">https://github.com/iwatakeshi</a></p></div>
+          <section id="settings">
+            <h1>settings</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">declaration</div><span>&nbsp;</span><span>settings</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Global settings</p></div>
+          <pre><code class="language-javascript">var settings = require('../settings');
+
+class Tokei {
+  constructor(locale) {</code></pre>
+          <section id="Intl">
+            <h1>Intl</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>this.Intl</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Set Intl Alias</p></div>
+          <pre><code class="language-javascript">this.Intl = {
+  'Date': intl.DateTimeFormat,
+  'Number': intl.NumberFormat
+};</code></pre>
+          <div class="description"><p>Set private variables</p></div>
+          <pre><code class="language-javascript">// Set the current date
+this._date = moment();
+// Set the initial number
+this._number = 0;
+// Set the locale
+this._locale = locale || settings.locale;
+// Set moment
+this._moment = moment;
+// Set moment to global locale
+this._moment.locale(locale || settings.locale);
+// Determines if the chain is formatting a number
+this._isNumber = false;
+    }</code></pre>
+          <section id="now">
+            <h1>now</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>now()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Returns the current date or time</p></div>
+          <pre><code class="language-javascript">now() {</code></pre>
+          <div class="description"><h3>Example</h3>
+<h4>Get the current date</h4>
+<pre><code class="lang-javascript">// Returns the current date
+tokei().date().now();
+</code></pre>
+<h4>Get the current time</h4>
+<pre><code class="lang-javascript">// Returns the current time
+tokei().time().now();
+</code></pre>
+</div>
+          <pre><code class="language-javascript">return new this.Intl.Date(this._locale, this._options).format(moment());
+    }</code></pre>
+          <section id="date">
+            <h1>date</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>date()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>options</td>
+                <td>Object</td>
+                <td><p>The options for date formatting.</p></td>
+              </tr>
+              <tr>
+                <td>return</td>
+                <td>Tokei</td>
+                <td><p>this</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Formats the date.<br />See (DateTimeFormat)[<a href="https://goo.gl/19d1rX">https://goo.gl/19d1rX</a>].</p></div>
+          <pre><code class="language-javascript">date(options) {</code></pre>
+          <section id="_options">
+            <h1>_options</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>this._options</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><h3>Example</h3>
+<h4>Get the formatted date.</h4>
+<pre><code class="lang-javascript">tokei().date().format(new Date(Date.UTC(2012, 11, 20, 3, 0, 0)));
+</code></pre>
+<h4>Get the formatted date with options.</h4>
+<pre><code class="lang-javascript">var options = { weekday: &#39;long&#39;, year: &#39;numeric&#39;, month: &#39;long&#39;, day: &#39;numeric&#39; };
+tokei(&#39;de-DE&#39;).date(options).format(new Date(Date.UTC(2012, 11, 20, 3, 0, 0)));
+</code></pre>
+</div>
+          <pre><code class="language-javascript">this._options = options || settings.date;
+this._isNumber = false;
+return this;
+    }</code></pre>
+          <section id="time">
+            <h1>time</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>time()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Formats the time.<br />See <a href="https://goo.gl/19d1rX">DateTimeFormat</a>.</p></div>
+          <pre><code class="language-javascript">time(options) {</code></pre>
+          <section id="_options">
+            <h1>_options</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>this._options</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><h3>Example</h3>
+<h4>Get the formatted time.</h4>
+<pre><code class="lang-javascript">tokei(&#39;en-AU&#39;).time().format(new Date(Date.UTC(2012, 11, 20, 3, 0, 0)));
+</code></pre>
+<h4>Get the formatted time with options.</h4>
+<pre><code class="lang-javascript">var options =  { hour: &#39;numeric&#39;, minute: &#39;numeric&#39;, second: &#39;numeric&#39;, timeZoneName: &#39;short&#39; };
+tokei(&#39;en-AU&#39;).time(options).format(new Date(Date.UTC(2012, 11, 20, 3, 0, 0)));
+</code></pre>
+</div>
+          <pre><code class="language-javascript">this._options = options || settings.time;
+this._isNumber = false;
+return this;
+    }</code></pre>
+          <section id="number">
+            <h1>number</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>number()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Formats the time.<br />See <a href="https://goo.gl/edHSxf">NumberFormat</a>.</p></div>
+          <pre><code class="language-javascript">number(options) {</code></pre>
+          <section id="_options">
+            <h1>_options</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>this._options</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><h3>Example</h3>
+<h4>Get the formatted number.</h4>
+<pre><code class="lang-javascript">tokei(&#39;de-DE&#39;).number().format(123456.789);
+</code></pre>
+<h4>Get the formatted number with options.</h4>
+<pre><code class="lang-javascript">var options =  { style: &#39;currency&#39;, currency: &#39;EUR&#39; };
+tokei(&#39;de-DE&#39;).number(options).format(123456.789);
+</code></pre>
+</div>
+          <pre><code class="language-javascript">this._options = options || {};
+this.isNumber = true;
+return this;
+    }</code></pre>
+          <section id="format">
+            <h1>format</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>format()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>obj</td>
+                <td>Date, Number</td>
+                <td><p>The object to format.</p></td>
+              </tr>
+              <tr>
+                <td>return</td>
+                <td>String, Number</td>
+                <td><p>The formatted date, time or number.</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Formats the object<br />See <a href="https://goo.gl/19d1rX">DateTimeFormat</a><br />and <a href="https://goo.gl/edHSxf">NumberFormat</a></p></div>
+          <pre><code class="language-javascript">format(obj) {</code></pre>
+          <section id="if">
+            <h1>if</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>if()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><h3>Example</h3>
+<h4>Get the formatted date, time, or number.</h4>
+<pre><code class="lang-javascript">//format date
+tokei().date().format([Date date]);
+//format time
+tokei().time().format([Date time]);
+//format number
+tokei().number().format([Number number]);
+</code></pre>
+</div>
+          <pre><code class="language-javascript">if (this.isNumber)
+  return new this.Intl.Number(this._locale, this._options).format(obj || this._number);
+else
+  return new this.Intl.Date(this._locale, this._options).format(obj || this._date);
+    }</code></pre>
+          <section id="moment">
+            <h1>moment</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>moment()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>arguments</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>return</td>
+                <td>Moment</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>The local moment.<br />See <a href="http://momentjs.com/">moment</a></p></div>
+          <pre><code class="language-javascript">moment() {</code></pre>
+          <div class="description"><h3>Example</h3>
+<h4>Using moment with Tokei.</h4>
+<pre><code class="lang-javascript">//use moment just as you would normally
+tokei().moment();
+//you can even set a locale
+tokei(&#39;ja&#39;).moment();
+</code></pre>
+</div>
+          <pre><code class="language-javascript">return this._moment.apply(this, arguments);
+  }
+}</code></pre>
+          <section id="tokei">
+            <h1>tokei</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">function</div><span>&nbsp;</span><span>tokei()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>locale</td>
+                <td>String</td>
+                <td><p>The local locale to set.</p></td>
+              </tr>
+              <tr>
+                <td>return</td>
+                <td>Tokei</td>
+                <td><p>The Tokei instance.</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Creates an instance of Tokei.</p></div>
+          <pre><code class="language-javascript">var tokei = function(locale) {</code></pre>
+          <div class="description"><h3>Example</h3>
+<h4>Get the formatted date, time, or number.</h4>
+<pre><code class="lang-javascript">tokei().date().format();
+//usage:
+//tokei().[api]().format()
+</code></pre>
+<h4>Setting the locale.</h4>
+<pre><code class="lang-javascript">tokei(&#39;ja&#39;).date().format()
+//usage:
+//tokei([String locale]).[api]().format()
+</code></pre>
+</div>
+          <pre><code class="language-javascript">return new Tokei(locale);
+};</code></pre>
+          <section id="locale">
+            <h1>locale</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>tokei.locale()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>locale</td>
+                <td>Object</td>
+                <td><p>The global locale.</p></td>
+              </tr>
+              <tr>
+                <td>return</td>
+                <td>Object</td>
+                <td><p>The global locale.</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"></div>
+          <pre><code class="language-javascript">tokei.locale = function(locale) {
+  settings.locale = locale;
+  return settings.locale;
+};</code></pre>
+          <section id="config">
+            <h1>config</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>tokei.config()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>options</td>
+                <td>Object</td>
+                <td><p>The global options.</p></td>
+              </tr>
+              <tr>
+                <td>return</td>
+                <td>Object</td>
+                <td><p>The global options.</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"></div>
+          <pre><code class="language-javascript">tokei.config = function(options) {
+  settings.options = options || settings.options;
+  return settings.options;
+};</code></pre>
+          <section id="moment">
+            <h1>moment</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>tokei.moment</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>The global moment. See {@link <a href="http://momentjs.com/|">http://momentjs.com/|</a> Moment.js}.</p></div>
+          <pre><code class="language-javascript">tokei.moment = moment;
+
+export default tokei;</code></pre>
+          <div class="footer site-footer">
+            <div class="span site-footer-owner"><a href="https://github.com/mr-doc/mr-doc-theme-cayman">Cayman</a> is maintained by <a href="https://github.com/iwatakeshi">iwatakeshi</a>.</div>
+            <div class="span site-footer-credits">This page was generated by <a href="https://github.com/mr-doc/mr-doc">Mr. Doc</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/affix.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/scrollspy.js"></script>
+    <script src="js/prism.js"></script>
+    <script src="js/prism-bash.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('body').scrollspy({
+          target: ".bs-docs-sidebar",
+          offset: 40
+        });
+        $('#sidebar').affix({
+          offset:{
+            bottom:60,
+            top: 60
+          }
+        }) 
+      });
+    </script>
+  </body>
+</html>
