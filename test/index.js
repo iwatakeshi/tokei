@@ -1,5 +1,5 @@
 var assert = require('chai').assert;
-var tokei = require('../index');
+var tokei = require('../src/');
 var Intl = require('intl');
 var moment = require('moment');
 
@@ -10,7 +10,7 @@ describe('tokei', function() {
             assert.isObject(tokei().date({}));
             assert.isObject(tokei().time({}));
             assert.isObject(tokei().number({}));
-            done()
+            done();
         });
     });
     describe('locales', function() {
