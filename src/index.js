@@ -118,6 +118,10 @@ var Tokei = (function () {
        * tokei('de-DE').date(options).format(new Date(Date.UTC(2012, 11, 20, 3, 0, 0)));
        *```
        */
+
+      /**
+       * @private
+       */
       this._options = options || settings.date;
       this._isNumber = false;
       return this;
@@ -147,6 +151,10 @@ var Tokei = (function () {
        * tokei('en-AU').time(options).format(new Date(Date.UTC(2012, 11, 20, 3, 0, 0)));
        * ```
        */
+
+      /**
+       * @private
+       */
       this._options = options || settings.time;
       this._isNumber = false;
       return this;
@@ -175,6 +183,10 @@ var Tokei = (function () {
        * var options =  { style: 'currency', currency: 'EUR' };
        * tokei('de-DE').number(options).format(123456.789);
        * ```
+       */
+
+      /**
+       * @private
        */
       this._options = options || {};
       this.isNumber = true;
