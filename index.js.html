@@ -36,8 +36,6 @@
                   </li>
                   <li><a href="#format"><i class="alert alert-info"></i><span>format</span></a>
                   </li>
-                  <li><a href="#if"><i class="alert alert-info"></i><span>if</span></a>
-                  </li>
                   <li><a href="#moment"><i class="alert alert-info"></i><span>moment</span></a>
                   </li>
                   <li><a href="#tokei"><i class="alert alert-info"></i><span>tokei</span></a>
@@ -217,13 +215,6 @@ tokei(&#39;de-DE&#39;).number(options).format(123456.789);
           </table>
           <div class="description"><p>Formats the object<br />See <a href="https://goo.gl/19d1rX">DateTimeFormat</a><br />and <a href="https://goo.gl/edHSxf">NumberFormat</a></p></div>
           <pre><code class="language-javascript">format(obj) {</code></pre>
-          <section id="if">
-            <h1>if</h1>
-            <h5 class="subheader"></h5>
-            <p>
-              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>if()</span><span>&nbsp;</span>
-            </p>
-          </section>
           <div class="description"><h3>Example</h3>
 <h4>Get the formatted date, time, or number.</h4>
 <pre><code class="lang-javascript">//format date
@@ -234,11 +225,6 @@ tokei().time().format([Date time]);
 tokei().number().format([Number number]);
 </code></pre>
 </div>
-          <pre><code class="language-javascript">if (this.isNumber)
-  return new this.Intl.Number(this._locale, this._options).format(obj || this._number);
-else
-  return new this.Intl.Date(this._locale, this._options).format(obj || this._date);
-    }</code></pre>
           <section id="moment">
             <h1>moment</h1>
             <h5 class="subheader"></h5>
