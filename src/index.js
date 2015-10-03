@@ -18,14 +18,6 @@ var _momentTimezone = require('moment-timezone');
 
 var _momentTimezone2 = _interopRequireDefault(_momentTimezone);
 
-/*jslint node: true, forin: true, jslint white: true, newcap: true, curly: false*/
-/*
- * tokei
- * author : Takeshi Iwana
- * https://github.com/iwatakeshi
- * @license MIT
- */
-
 /**
  * Global settings
  */
