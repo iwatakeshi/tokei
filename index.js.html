@@ -30,15 +30,9 @@
                   </li>
                   <li><a href="#date"><i class="alert alert-info"></i><span>date</span></a>
                   </li>
-                  <li><a href="#_options"><i class="alert alert-success"></i><span>_options</span></a>
-                  </li>
                   <li><a href="#time"><i class="alert alert-info"></i><span>time</span></a>
                   </li>
-                  <li><a href="#_options"><i class="alert alert-success"></i><span>_options</span></a>
-                  </li>
                   <li><a href="#number"><i class="alert alert-info"></i><span>number</span></a>
-                  </li>
-                  <li><a href="#_options"><i class="alert alert-success"></i><span>_options</span></a>
                   </li>
                   <li><a href="#format"><i class="alert alert-info"></i><span>format</span></a>
                   </li>
@@ -148,13 +142,6 @@ tokei().time().now();
           </table>
           <div class="description"><p>Formats the date.<br />See (DateTimeFormat)[<a href="https://goo.gl/19d1rX">https://goo.gl/19d1rX</a>].</p></div>
           <pre><code class="language-javascript">date(options) {</code></pre>
-          <section id="_options">
-            <h1>_options</h1>
-            <h5 class="subheader"></h5>
-            <p>
-              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>this._options</span><span>&nbsp;</span>
-            </p>
-          </section>
           <div class="description"><h3>Example</h3>
 <h4>Get the formatted date.</h4>
 <pre><code class="lang-javascript">tokei().date().format(new Date(Date.UTC(2012, 11, 20, 3, 0, 0)));
@@ -164,10 +151,6 @@ tokei().time().now();
 tokei(&#39;de-DE&#39;).date(options).format(new Date(Date.UTC(2012, 11, 20, 3, 0, 0)));
 </code></pre>
 </div>
-          <pre><code class="language-javascript">this._options = options || settings.date;
-this._isNumber = false;
-return this;
-    }</code></pre>
           <section id="time">
             <h1>time</h1>
             <h5 class="subheader"></h5>
@@ -177,13 +160,6 @@ return this;
           </section>
           <div class="description"><p>Formats the time.<br />See <a href="https://goo.gl/19d1rX">DateTimeFormat</a>.</p></div>
           <pre><code class="language-javascript">time(options) {</code></pre>
-          <section id="_options">
-            <h1>_options</h1>
-            <h5 class="subheader"></h5>
-            <p>
-              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>this._options</span><span>&nbsp;</span>
-            </p>
-          </section>
           <div class="description"><h3>Example</h3>
 <h4>Get the formatted time.</h4>
 <pre><code class="lang-javascript">tokei(&#39;en-AU&#39;).time().format(new Date(Date.UTC(2012, 11, 20, 3, 0, 0)));
@@ -193,10 +169,6 @@ return this;
 tokei(&#39;en-AU&#39;).time(options).format(new Date(Date.UTC(2012, 11, 20, 3, 0, 0)));
 </code></pre>
 </div>
-          <pre><code class="language-javascript">this._options = options || settings.time;
-this._isNumber = false;
-return this;
-    }</code></pre>
           <section id="number">
             <h1>number</h1>
             <h5 class="subheader"></h5>
@@ -206,13 +178,6 @@ return this;
           </section>
           <div class="description"><p>Formats the time.<br />See <a href="https://goo.gl/edHSxf">NumberFormat</a>.</p></div>
           <pre><code class="language-javascript">number(options) {</code></pre>
-          <section id="_options">
-            <h1>_options</h1>
-            <h5 class="subheader"></h5>
-            <p>
-              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>this._options</span><span>&nbsp;</span>
-            </p>
-          </section>
           <div class="description"><h3>Example</h3>
 <h4>Get the formatted number.</h4>
 <pre><code class="lang-javascript">tokei(&#39;de-DE&#39;).number().format(123456.789);
@@ -222,10 +187,6 @@ return this;
 tokei(&#39;de-DE&#39;).number(options).format(123456.789);
 </code></pre>
 </div>
-          <pre><code class="language-javascript">this._options = options || {};
-this.isNumber = true;
-return this;
-    }</code></pre>
           <section id="format">
             <h1>format</h1>
             <h5 class="subheader"></h5>
