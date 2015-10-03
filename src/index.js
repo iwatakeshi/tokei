@@ -217,6 +217,10 @@ var Tokei = (function () {
        * tokei().number().format([Number number]);
        * ```
        */
+
+      /**
+       * @private
+       */
       if (this.isNumber) return new this.Intl.Number(this._locale, this._options).format(obj || this._number);else return new this.Intl.Date(this._locale, this._options).format(obj || this._date);
     }
 
