@@ -15,11 +15,12 @@ See [documentation](http://iwatakeshi.github.io/tokei/).
 ## Usage
 
 ```bash
+# Install
 npm install --save tokei
 ```
 
 
-```js
+```javascript
 var tokei = require('tokei');
 
 tokei(locale).date().now();
