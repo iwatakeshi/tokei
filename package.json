@@ -1,6 +1,6 @@
 {
   "name": "tokei",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Date, time, and number, localization for Node.js",
   "main": "src/index.js",
   "dependencies": {
