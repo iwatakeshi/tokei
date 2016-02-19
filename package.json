@@ -4,26 +4,26 @@
   "description": "Date, time, and number, localization for Node.js",
   "main": "src/index.js",
   "dependencies": {
-    "intl": "^1.0.1",
+    "intl": "^1.1.0",
     "moment": "^2.11.2",
     "moment-timezone": "^0.5.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "gulp": "^3.9.0",
-    "gulp-babel": "^5.2.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
     "gulp-changelog": "^1.0.0",
-    "gulp-gh-pages": "^0.5.2",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-jsbeautify": "^0.1.1",
     "gulp-jshint": "^2.0.0",
-    "gulp-mocha": "^2.1.3",
+    "gulp-mocha": "^2.2.0",
     "gulp-shell": "^0.5.2",
-    "gulp-sourcemaps": "^1.5.2",
+    "gulp-sourcemaps": "^1.6.0",
     "jshint": "^2.9.1",
-    "jshint-stylish": "^2.0.1",
+    "jshint-stylish": "^2.1.0",
     "mr-doc": "^3.1.2",
     "mr-doc-theme-cayman": "^1.0.3",
-    "rimraf": "^2.4.3"
+    "rimraf": "^2.5.2"
   },
   "scripts": {
     "test": "gulp test"
